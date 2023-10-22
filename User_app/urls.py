@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import PasswordGeneratorLevel1, PasswordGeneratorLevel2, PasswordGeneratorLevel3, UserRegistration, \
-    PasswordAplication
+    PasswordAplication, Show_all_userpasswords, User_passwords
 from .views import Login
 
 urlpatterns = [
@@ -10,5 +10,6 @@ urlpatterns = [
     path('register/', UserRegistration.as_view()),
     path('password_aplication/', PasswordAplication.as_view()),
     path("login/", Login.as_view()),
-
+    path("all/", Show_all_userpasswords.as_view()),
+    path('user_info/',User_passwords.as_view()),
 ]
