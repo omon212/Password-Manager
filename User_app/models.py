@@ -10,8 +10,7 @@ class User(models.Model):
         return self.username
 
 
-
-
+#-----------------PASSWORD-----------------#
 
 class Password(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='passwords')
