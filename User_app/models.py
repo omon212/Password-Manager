@@ -10,6 +10,9 @@ class User(models.Model):
         return self.username
 
 
+
+
+
 class Password(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='passwords')
     name_of_applications = models.CharField(max_length=50, null=False)
