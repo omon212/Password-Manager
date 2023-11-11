@@ -91,6 +91,7 @@ class UserRegistration(APIView):
 
 
 class PasswordAplication(APIView):
+
     serializer_class = PasswordSerializer
     queryset = Password.objects.all()
 
